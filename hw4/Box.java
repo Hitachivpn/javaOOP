@@ -2,7 +2,7 @@ package ru.gb.lesson4.hw;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Box<T extends Fruit> {
+public class Box<T> {
 
     List<T> fruits = new ArrayList<T>();
 
@@ -17,7 +17,6 @@ public class Box<T extends Fruit> {
         }
         return weight;
     }
-
     public void moveTo(Box<? super T> anotherBox) {
         for (T fr : fruits) {
             anotherBox.add(fr);
